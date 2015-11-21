@@ -1,0 +1,97 @@
+<style>
+div.center-align {
+  clear:both;
+  margin: 0 auto;
+  text-align: center;
+
+}
+div.a {
+  line-height: 125%;
+  padding-top: -20px;
+}
+div.recc {
+  margin-top: -30px;
+}
+div.submit-button {
+  margin-top: 20px;
+  font-size: 20px;
+}
+</style>
+
+<div class="center container" ng-controller="uploadController">
+  <!-- upload -->
+  <form action="#">
+    <div class="file-field input-field">
+      <div class="btn">
+        <span>Your Image</span>
+        <input type="file">
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text">
+      </div>
+    </div>
+    <!-- comment -->
+    <div class="row">
+      <form class="col">
+        <div class="row">
+          <div class="input-field a">
+            <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+            <label for="icon_prefix2">Tell them about it!</label>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- reccomendation -->
+    <div class="recc">
+      <div class="btn">
+        Eat!
+      </div>&nbsp;
+      <div class="btn red">
+        Don't Eat!
+      </div>
+    </div>
+    <!-- submit -->
+    <div class="submit-button btn">
+      Submit <i class="mdi-content-send right"></i>
+    </div>
+  </form>
+  <!-- <div class="file-field center-align">
+  <div class="center-align btn">
+  <input type="file" id="imgInp" />
+  <span>Pick a photo to upload &nbsp;<i class="mdi-image-camera-alt"></i></span>
+  <form id="form1" runat="server">
+  <img id="blah" src="#" alt="your image" />
+  <div class="input-field">
+  <input type="text" class="blue-text text-darken-2 validate">
+  <label for="icon_prefix2">Describe dat food!</label>
+</div>
+
+<div class="">
+<a ui-sref="profile" class="comment-submit btn waves-effect waves-light submit">Submit &nbsp;<i class="mdi-content-send right"></i>
+</a>
+</div>
+</form>
+</div>
+<div class="zero-width file-path-wrapper">
+<input class="file-path validate" type="text">
+</div>
+</div> -->
+
+<script>
+$('#blah').hide();
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      $('#blah').show();
+      $('#blah').attr('src', e.target.result);
+    }
+    reader.readAsDataURL(input.files[0])
+  }
+}
+$('#imgInp').change(function() {
+  readURL(this);
+});
+</script>
+
+</div>

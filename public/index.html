@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="tastebuds">
+<head>
+  <meta charset="utf-8">
+  <title>TasteBuds</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+  <!--put stylesheets here-->
+  <style>
+  html {
+    background-color: grey;
+  }
+  div.navbar {
+    background-color: black;
+    padding: 5px 0;
+    background-color: grey;
+  }
+  </style>
+</head>
+<body style="text-align: center">
+  <h1>TasteBuds</h1>
+  <!-- <h3>Welcome to TasteBuds</h3> -->
+  <div class="navbar">
+    <a class="btn feed" ui-sref="feed">Feed</a>
+    <a class="btn upload" ui-sref="upload">Upload</a>
+    <a class="btn profile" ui-sref="profile">Profile</a>
+    <a class="btn want-to-try" ui-sref="wantToTry">Want to Try</a>
+  </div>
+  <div ui-view></div>
+<!-- <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+  <div>
+    <footer class="footer-copyright right-center">
+      <div class="footer">
+        <div class="foot">
+          Kickass Koalas
+          <a href="https://github.com/KickassKoalas/TasteBuds">@github</a>
+        </div>
+      </div>
+    </footer>
+  </div> -->
+
+  <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.2/js/materialize.min.js"></script>
+  <script src="./bower_components/angular/angular.min.js"></script>
+  <script src='./bower_components/angular-ui-router/release/angular-ui-router.min.js'></script>
+  <script src='./js/module.js'></script>
+
+</body>
+</html>

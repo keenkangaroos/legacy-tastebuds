@@ -1,0 +1,27 @@
+{
+  "name": "tastebuds",
+  "version": "1.0.0",
+  "description": "Food with friends",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/KickassKoalas/Greenfield-Project.git"
+  },
+  "author": "Avi Samloff, Vidiu Chiu, Tina Lai, Matthew Murkidjanian, Kevin Cheng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KickassKoalas/Greenfield-Project/issues"
+  },
+  "homepage": "https://github.com/KickassKoalas/Greenfield-Project#readme",
+  "dependencies": {
+    "bluebird": "^3.0.5",
+    "body-parser": "^1.14.1",
+    "bookshelf": "^0.9.1",
+    "express": "^4.13.3",
+    "knex": "^0.9.0",
+    "pg": "^4.4.3"
+  }
+}

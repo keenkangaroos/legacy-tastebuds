@@ -1,0 +1,31 @@
+{
+  "name": "TasteBuds",
+  "homepage": "http://taste-buds.firebaseapp.com/",
+  "authors": [
+    "Avi Samloff",
+    "Vidiu Chiu",
+    "Tina Lai",
+    "Matthew Murkidjanian",
+    "Kevin Cheng"
+  ],
+  "description": "Food with friends",
+  "main": "",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "fontawesome#~4.4.0",
+    "Materialize": "materialize#~0.97.2",
+    "angular": "~1.4.7",
+    "jQuery": "~2.1.4",
+    "angular-ui-router": "~0.2.15"
+  }
+}

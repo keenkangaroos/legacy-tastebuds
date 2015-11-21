@@ -1,0 +1,23 @@
+<div class="container landing-page" ng-controller="landingController">
+  <div class="row">
+    <div class="col s12 m4 l12 center-align"><h3>Welcome!</h3></div>
+  </div>
+  <section class="container">
+    <div class="login">
+      <form method="post" action="user-profile.html">
+        <p><input type="text" name="login" value="" placeholder="Username or Email"></p>
+        <p><input type="password" name="password" value="" placeholder="Password"></p>
+
+        <p class="remember_me">
+          <input type="checkbox" name="remember_me" id="test5">
+          <label for="test5">Remember me on this computer</label>
+        </p>
+      </form>
+      <a class="btn" ui-sref="feed">
+        Login <i class="mdi-content-send right"></i>
+      </a>
+    </div>
+  </section>
+</div>
+<!-- Need to add all the stuff for the facebook log-in button -->
+<!-- <div class="fb-login-button" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false"></div> -->

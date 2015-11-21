@@ -1,0 +1,37 @@
+footer.footer-copyright {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+div.zero-width {
+  width: 0;
+  max-width: 0;
+  margin: 0 auto;
+}
+div.center {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  max-width: 25%;
+  border-radius: 10px;
+}
+button.comment-submit {
+  border-radius: 10px;
+  /*margin-top: -95px;*/
+  margin-left: 20%;
+}
+img#blah {
+  max-height: 400px;
+  max-width: 400px;
+  position: relative;
+  left: -35%;
+}
+div.input-field {
+  line-height: 9px;
+}
+textarea.input-field {
+  line-height: 20px;
+  margin-top: 8px;
+}
