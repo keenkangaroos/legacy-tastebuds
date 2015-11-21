@@ -17,7 +17,6 @@
 #### Legacy Dev Team ####
 - Scrum Master: [Jonathan Kvicky](http://jonkvix.com)
 - Software Engineers: [Jeffrey Yang](http://jeffycyang.github.io), [Nick Krein](https://github.com/nkreinmusic), [Stephanie Raad](https://github.com/Stephyraad), [Jonathan Kvicky](https://github.com/jonkvix)
-# legacy-tastebuds
 
 #### Concept Dev Team ####
 - Product Owner: [Avi Samloff](http://AviSamloff.com)
