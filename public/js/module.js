@@ -24,9 +24,6 @@ angular.module('tastebuds', [
     .state('profile.postList', {
       url: '/post-list',
       templateUrl: '../views/post-list.html',
-      controller: function($scope) {
-        $scope.dogs = ['fuck', 'poop', 'shit'];
-      }
     })
     .state('profile.eatList', {
       url: '/want-to-try',
@@ -67,11 +64,16 @@ angular.module('tastebuds', [
 })
 
 .controller('profileController', function($scope, $http) {
-    $scope.profile = {
-        username: 'users.username',
-        posts: [],
-        wantToEat: []
-    };
+    $scope.profile;
+    // $http.get('/users/:id').success(function(data){
+    $http.get('/users/1').success(function(data){
+     $scope.profile = data;
+     console.log("DATA: ", $scope.profile.name);
+    })
+    .error(function(error){
+      console.log('ERROR: ' + error);
+    });
+
     $scope.getPosts = $http.get({
         method: 'GET',
         url: '/posts'
