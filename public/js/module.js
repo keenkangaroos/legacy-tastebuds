@@ -40,46 +40,61 @@ angular.module('tastebuds', [
 })
 
 .controller('feedController', function($scope, $http) {
-  $scope.username = 'Zack Lee';
-  var postPicture = $http({
-    method: 'GET',
-    url: '/posts'
-  }).then(function(response) {
-    // when the response is available
-    if (response.image) {
-      console.log($scope.image);
-      $scope.image = response.data.image;
-    }
-
-  }, function errorCallback(error) {
-    // or server returns response with an error status.
-    //run error
-    if (error) {
-      console.log('feedController error!');
-    }
-
-
+  $scope.allPosts;
+  $http.get('/posts').success(function(data){
+    $scope.allposts = data;
+    console.log("DATA ALL POSTS: ", $scope.allposts);
+  })
+  .error(function(error){
+    console.log('ERROR: ' + error)
   });
+  // var postPicture = $http({
+  //   method: 'GET',
+  //   url: '/posts'
+  // }).then(function(response) {
+  //   // when the response is available
+  //   if (response.image) {
+  //     console.log($scope.image);
+  //     $scope.image = response.data.image;
+  //   }
+
+  // }, function errorCallback(error) {
+  //   // or server returns response with an error status.
+  //   //run error
+  //   if (error) {
+  //     console.log('feedController error!');
+  //   }
+
+
+  // });
 
 })
 
 .controller('profileController', function($scope, $http) {
-    $scope.profile;
     // $http.get('/users/:id').success(function(data){
-    $http.get('/users/1').success(function(data){
-     $scope.profile = data;
-     console.log("DATA: ", $scope.profile.name);
+    $http.get('/users/5').success(function(data){
+     $scope.userProfile = data;
+     console.log("DATA: ", $scope.profile);
     })
     .error(function(error){
       console.log('ERROR: ' + error);
     });
 
-    $scope.getPosts = $http.get({
-        method: 'GET',
-        url: '/posts'
-    }).then(function(posts) {
-        return posts;
+    $http.get('/posts/user/5').success(function(data){
+      $scope.userPosts = data.data;
+      console.log("inside user post", $scope.userPosts
+        )
+    })
+    .error(function(error){
+      console.log('ERROR: ' + error);
     });
+
+    // $scope.getPosts = $http.get({
+    //     method: 'GET',
+    //     url: '/posts'
+    // }).then(function(posts) {
+    //     return posts;
+    // });
     $scope.getEats = $http.get({
         method: 'GET',
         // can this url be directed at the getEats row in the posts table?

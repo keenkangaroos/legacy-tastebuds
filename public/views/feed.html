@@ -18,116 +18,12 @@ div.post-buttons {
 ​
 <div class="feed center-align" ng-controller="feedController">
   <div class="post">
-  <!-- FOR STEPH USER -->
-  <div></div>
-    <!--  -->
-    <div class ="picture-container" class="col s12 m4 l12 center-align">
-      <!-- <h4>{{username}}</h4> -->
-      <h4>Vidiu</h4>
-      ​
-      <img src="https://i.ytimg.com/vi/ztVgZw3Q55M/maxresdefault.jpg"/>
-      <!-- <img ng-src="{{image}}"/> -->
-    </div>
-    ​
-    <div class="post-buttons">
-      <!-- <button class="btn waves-effect waves-light" type="submit" name="action"> Eat
-      <i class="material-icons right"></i>
-    </button> -->
-    ​
-    <button class="btn waves-effect waves-light red accent-3" type="submit" name="action">Don't Eat
-      <i class="material-icons right"></i>
-    </button>
-    ​
-    <button class="btn waves-effect waves-light" type="submit" name="action">I want to try &#9825;
-      <i class="material-icons right"></i>
-    </button>
-  </div>
-  <!--  -->
-  <div class ="picture-container" class="col s12 m4 l12 center-align">
-    <h4>Avi</h4>
-    ​
-    <img src="http://www.topoftheworldlv.com/images/hero_images/menu-3.jpg"/>
-    <!-- <img ng-src="{{image}}"/> -->
-  </div>
-  ​
-  <div class="post-buttons">
-    <button class="btn waves-effect waves-light" type="submit" name="action"> Eat
-      <i class="material-icons right"></i>
-    </button>
-    ​
-    <!-- <button class="btn waves-effect waves-light" type="submit" name="action">Don't Eat
-    <i class="material-icons right"></i>
-  </button> -->
-  ​
-  <button class="btn waves-effect waves-light" type="submit" name="action">I want to try &#9825;
-    <i class="material-icons right"></i>
-  </button>
-</div>
-<!--  -->
-<div class ="picture-container" class="col s12 m4 l12 center-align">
-  <h4>Matt</h4>
-  ​
-  <img src="https://pbs.twimg.com/media/BSg7UPLIgAADq5e.jpg"/>
-  <!-- <img ng-src="{{image}}"/> -->
-</div>
-​
-<div class="post-buttons">
-  <button class="btn waves-effect waves-light" type="submit" name="action"> Eat
-    <i class="material-icons right"></i>
-  </button>
-  ​
-  <!-- <button class="btn waves-effect waves-light" type="submit" name="action">Don't Eat
-  <i class="material-icons right"></i>
-</button> -->
-​
-<button class="btn waves-effect waves-light" type="submit" name="action">I want to try &#9825;
-  <i class="material-icons right"></i>
-</button>
-</div>
-<!--  -->
-<div class ="picture-container" class="col s12 m4 l12 center-align">
-  <h4>Kevin</h4>
-  ​
-  <img src="https://theverybesttop10.files.wordpress.com/2013/04/the-world_s-top-10-best-foods-inspired-by-hello-kitty-3.jpg"/>
-  <!-- <img ng-src="{{image}}"/> -->
-</div>
-​
-<div class="post-buttons">
-  <!-- <button class="btn waves-effect waves-light" type="submit" name="action"> Eat
-  <i class="material-icons right"></i>
-</button> -->
-​
-<button class="btn waves-effect waves-light red accent-3" type="submit" name="action">Don't Eat
-  <i class="material-icons right"></i>
-</button>
-​
-<a class="btn waves-effect waves-light want-to-try" ui-sref="wantToTry">
-  I want to try &#9825;
-  <i class="material-icons right"></i>
-</a>
 
-</div>
-<!--  -->
-<div class ="picture-container" class="col s12 m4 l12 center-align">
-  <h4>Tina</h4>
-  ​
-  <img src="http://assets.nydailynews.com/polopoly_fs/1.1075696!/img/httpImage/image.jpg_gen/derivatives/article_970/shutterstock-37-1e336135104-original-web.jpg"/>
-  <!-- <img ng-src="{{image}}"/> -->
-</div>
-​
-<div class="post-buttons">
-  <button class="btn waves-effect waves-light" type="submit" name="action"> Eat
-    <i class="material-icons right"></i>
-  </button>
-  ​
-  <!-- <button class="btn waves-effect waves-light" type="submit" name="action">Don't Eat
-  <i class="material-icons right"></i>
-</button> -->
-​
-<button class="btn waves-effect waves-light" type="submit" name="action">I want to try &#9825;
-  <i class="material-icons right"></i>
-</button>
-</div>
-<!--  -->
-</div>
+    <li ng-repeat="post in allposts">
+    <h4>{{    }}</h4>
+      <p><b>Location</b>{{ post.location }}<p>
+      <p>{{ post.comment }}</p>
+    </li>
+
+</div> <!-- end of post class -->
 </div>
