@@ -7,7 +7,7 @@ var knex = require('knex')({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'legacydatabase',
+    database: 'budsdatabase',
     charset: 'utf8'
   }
 });
