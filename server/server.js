@@ -50,6 +50,8 @@ app.delete('/posts/:id', postController.deletePost);
 app.post('/users', userController.createUser);
 // get user
 app.get('/users/:id', userController.getUser);
+// get all users
+app.get('/users', userController.listUser);
 // delete user
 app.delete('/users/:id', userController.deleteUser);
 // create want to try

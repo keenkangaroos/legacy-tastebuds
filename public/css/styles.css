@@ -18,6 +18,11 @@
 .profile-info .container.two{
   margin-top: 15px;
 }
+.post-form{
+  width: 300px;
+  float: left;
+  margin-left: 90px;
+}
 footer.footer-copyright {
   display: flex;
   min-height: 100vh;
