@@ -35,3 +35,22 @@ textarea.input-field {
   line-height: 20px;
   margin-top: 8px;
 }
+
+html {        
+  background: #283048; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #283048 , #859398); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #283048 , #859398); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */              
+}
+
+div.navbar {
+    background-color: black;
+    padding: 5px 0;
+    background-color: grey;
+}
+
+a.btn {
+  border-radius: 20px;
+  margin: 5px;
+}
+
+
