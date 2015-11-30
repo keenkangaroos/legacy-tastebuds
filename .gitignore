@@ -1,1 +1,4 @@
 server/node_modules/
+server/package.json
+database/
+public/bower_components/
