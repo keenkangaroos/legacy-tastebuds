@@ -13,6 +13,13 @@ div.post-buttons {
   margin-top: -5px;
   margin-bottom: 25px;
 }
+.recc {
+  display: inline;
+  padding-right: 10px;
+}
+.try{
+  display:inline;
+}
 </style>
 ​
 ​
@@ -25,14 +32,19 @@ div.post-buttons {
       <p>{{ post.comment }}</p>
       <img src="{{post.image}}">
 
+     <div class="buttons">
       <div class="recc">
         <div ng-if="post.eat" class="btn">
           Eat!
         </div>&nbsp;
-        <div ng-if="!post.eat"class="btn red">
+        <div ng-if="!post.eat" class="btn red">
           Don't Eat!
         </div>
       </div>
+      <button ng-click="wantToTry(post)" class="btn waves-effect waves-light try" type="submit" name="action">I want to try &#9825;
+        <i class="material-icons right"></i>
+      </button>
+    </div>
     </li>
 
 </div> <!-- end of post class -->

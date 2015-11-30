@@ -42,9 +42,7 @@ angular.module('tastebuds', [
 .controller('feedController', function($scope, $http) {
 
   $http.get('/posts').success(function(data){
-
     $scope.allposts = data;
-
     var newImg = $('<img class="postImage">');
     newImg.attr('src', $scope.allposts[$scope.allposts.length-1].image);
     newImg.appendTo('.post li').last();
@@ -52,6 +50,18 @@ angular.module('tastebuds', [
   .error(function(error){
     console.log('ERROR: ' + error)
   });
+  $scope.wantToTry = function(post) {
+    console.log("SECTION: " + JSON.stringify(post))
+    $scope.post =post;
+    var data = {
+      user_id: $scope.post.user_id,
+      post_id: $scope.post.id
+    }
+    console.log(data)
+    $http.post('/want_to_trys', data).success(function(data, status){
+      console.log("SUCCESS: " + data);
+    });
+  }
 })
 
 .controller('profileController', function($scope, $http) {
@@ -101,4 +111,24 @@ angular.module('tastebuds', [
       console.log('data2: ', data);
     })
   }
+})
+
+.controller('wantToTryController', function($scope, $http){
+  $http.get('/want_to_trys/user/1').success(function(data){
+    console.log("BLA" + JSON.stringify(data));
+    $scope.wantToTryUser = data;
+  })
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
