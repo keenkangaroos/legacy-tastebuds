@@ -35,23 +35,6 @@ angular.module('tastebuds', [
     });
 })
 
-// .service('SharedUserDataService', function ($http) {
-//   var SharedUserDataService = {
-//     async: function() {
-//       // $http returns a promise, which has a then function, which also returns a promise
-//       var promise = $http.get('').then(function (response) {
-//         // The then function here is an opportunity to modify the response
-//         console.log(response);
-//         // The return value gets picked up by the then in the controller.
-//         return response.data;
-//       });
-//       // Return the promise to the controller
-//       return promise;
-//     }
-//   };
-//   return myService;
-// })
-
 .controller('landingController', function($scope) {
   $scope.message = 'lol the landingController works.';
 })
@@ -59,9 +42,12 @@ angular.module('tastebuds', [
 .controller('feedController', function($scope, $http) {
 
   $http.get('/posts').success(function(data){
-    // console.log("SCOPE" + $scope.userProfile)
+
     $scope.allposts = data;
-    console.log("DATA ALL POSTS: ", data[0].user);
+
+    var newImg = $('<img class="postImage">');
+    newImg.attr('src', $scope.allposts[$scope.allposts.length-1].image);
+    newImg.appendTo('.post li').last();
   })
   .error(function(error){
     console.log('ERROR: ' + error)
@@ -85,29 +71,34 @@ angular.module('tastebuds', [
     .error(function(error){
       // console.log('ERROR: ' + error);
     });
-
-    $scope.submit = function(){
-      var data = {
-         location: $scope.location,
-         user_id: $scope.user_id,
-         restaurant_id: $scope.restaurant_id,
-         comment: $scope.comment
-        }
-
-       $http.post('/posts', data).success(function(data, status){
-        console.log('data2: ', data);
-      })
-    }
 })
 
-.controller('uploadController', function($scope, $http, uploadFactory) {
-  var self = this;
-  self.bullshit = 'ricky';
-  self.postData = function() {
-    console.log('postData fires');
-    uploadFactory.sendData()
-    .then(function(res) {
-      console.log(res.data);
-    });
-  };
+.controller('uploadController', function($scope, $http) {
+    $('.recc .btn').click(function(){
+      $scope.eat = true;
+    })
+    $('.recc .btn.red').click(function(){
+      $scope.eat = false;
+    })
+    console.log($scope.eat);
+
+  $scope.submit = function(){
+    console.log("INSIDE SUBMIT")
+    var imgVar= $(".upload-file").prop('files')[0]['name'];
+    $scope.imgTag ="assets/"+imgVar;
+    console.log("IMGTAG: "+ $scope.imgTag);
+
+    var data = {
+     location: $scope.location,
+     user_id: $scope.user_id,
+     restaurant_id: $scope.restaurant_id,
+     post_image: $scope.imgTag,
+     comment: $scope.comment,
+     eat: $scope.eat
+    }
+
+    $http.post('/posts', data).success(function(data, status){
+      console.log('data2: ', data);
+    })
+  }
 });

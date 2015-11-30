@@ -19,10 +19,20 @@ div.post-buttons {
 <div class="feed center-align" ng-controller="feedController">
   <div class="post">
 
-    <li ng-repeat="post in allposts">
+    <li style='list-style: none;' ng-repeat="post in allposts">
     <h4>{{post.user.name}}</h4>
-      <p><b>Location</b>{{ post.location }}<p>
+      <p><b>Location:</b> {{ post.location }}<p>
       <p>{{ post.comment }}</p>
+      <img src="{{post.image}}">
+
+      <div class="recc">
+        <div ng-if="post.eat" class="btn">
+          Eat!
+        </div>&nbsp;
+        <div ng-if="!post.eat"class="btn red">
+          Don't Eat!
+        </div>
+      </div>
     </li>
 
 </div> <!-- end of post class -->
