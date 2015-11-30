@@ -1,6 +1,7 @@
 ### NPM ###
 npm-debug.log
 node_modules
+public/bower_components
 
 ### database ###
 legacydatabase
