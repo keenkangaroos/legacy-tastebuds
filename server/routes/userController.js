@@ -42,7 +42,14 @@ exports.getUser = function(req, res) {
       }
     });
 };
-
+//* get all users from the database */
+exports.listUser = function(req, res){
+  Users.forge()
+    .fetch()
+      .then(function(collectionUsers){
+        res.send(collectionUsers.toJSON());
+      })
+}
 
 /* In delete(), we are deleting a single user.
  */
