@@ -33,6 +33,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(bodyParser.json());
+console.log(__dirname);
 
 app.use(express.static(__dirname + '/../public'));
 

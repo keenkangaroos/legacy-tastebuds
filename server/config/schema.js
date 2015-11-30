@@ -49,7 +49,7 @@ var buildTable = function(name, callback) {
 
 var users = buildTable('users', function(table) {
   table.increments('id').primary();
-  table.string('user_id');
+  table.string('facebook_id');
   table.string('name');
   table.string('password').notNullable();
   table.string('profile_picture');
