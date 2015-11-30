@@ -114,10 +114,23 @@ angular.module('tastebuds', [
 })
 
 .controller('wantToTryController', function($scope, $http){
+  var array;
   $http.get('/want_to_trys/user/1').success(function(data){
     console.log("BLA" + JSON.stringify(data));
-    $scope.wantToTryUser = data;
-  })
+    array = data.data;
+    console.log(JSON.stringify(array[0]));
+  });
+  $scope.wantToTryUser =[];
+  setTimeout(function(){
+   array.forEach(function(single){
+     $http.get('/posts/'+single.post_id).success(function(data){
+       console.log("BOOOO ",data);
+       $scope.wantToTryUser.push(data);
+     })
+   })
+
+  },1000);
+
 });
 
 

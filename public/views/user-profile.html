@@ -1,3 +1,17 @@
+<style>
+  .user-post-container{
+    float:right;
+    margin-right: 200px;
+  }
+  .user-post-container img{
+    width: 500px;
+    height: 500px;
+    border-radius: 15px;
+  }
+  .user-post-container li{
+    list-style-type: none;
+  }
+</style>
 <div ng-controller="profileController" class="container user-profile">
   <div class="row">
     <div class="col s12 center-align"></div>
@@ -22,8 +36,9 @@
 
     <div class= "user-post-container">
     <li ng-repeat="post in userPosts">
-      <p><b>Location</b>{{ post.location }}<p>
+      <p><b>Location</b> {{ post.location }}<p>
       <p>{{ post.comment }}</p>
+      <img src="{{post.image}}">
     </li>
 
     </div>
