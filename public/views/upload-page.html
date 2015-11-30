@@ -10,28 +10,34 @@ div.a {
   padding-top: -20px;
 }
 div.recc {
-  margin-top: -30px;
+  margin-top: 30px;
 }
-div.submit-button {
+#submit-btn {
   margin-top: 20px;
   font-size: 20px;
 }
 </style>
 
 <div class="center container" ng-controller="uploadController">
+  <form class="post-form" id="main" ng-submit="submit()">
   <!-- upload -->
-  <form action="#">
     <div class="file-field input-field">
       <div class="btn">
         <span>Your Image</span>
-        <input type="file">
+        <input type="file" class="upload-file">
       </div>
       <div class="file-path-wrapper">
         <input class="file-path validate" type="text">
       </div>
     </div>
     <!-- comment -->
-    <div class="row">
+
+      <input ng-model="location" type="text" name='location' placeholder="Location" /><br/>
+      <input ng-model="user_id" type="text" name='location' placeholder="user id" /><br/>
+      <input ng-model="restaurant_id" type="text" name='location' placeholder="restaurant id"/><br/>
+      <textarea ng-model="comment" name='comment' placeholder='Comments' class='comment'></textarea><br/>
+<!--       <input type="submit" value="submit"></input> -->
+<!--     <div class="row">
       <form class="col">
         <div class="row">
           <div class="input-field a">
@@ -40,7 +46,7 @@ div.submit-button {
           </div>
         </div>
       </form>
-    </div>
+    </div> -->
     <!-- reccomendation -->
     <div class="recc">
       <div class="btn">
@@ -51,9 +57,10 @@ div.submit-button {
       </div>
     </div>
     <!-- submit -->
-    <div class="submit-button btn">
+      <input type="submit" id="submit-btn" value="submit"></input>
+<!--     <div class="submit-button btn">
       Submit <i class="mdi-content-send right"></i>
-    </div>
+    </div> -->
   </form>
   <!-- <div class="file-field center-align">
   <div class="center-align btn">
@@ -78,20 +85,20 @@ div.submit-button {
 </div> -->
 
 <script>
-$('#blah').hide();
-function readURL(input) {
-  if (input.files && input.files[0]) {
-    var reader = new FileReader();
-    reader.onload = function(e) {
-      $('#blah').show();
-      $('#blah').attr('src', e.target.result);
-    }
-    reader.readAsDataURL(input.files[0])
-  }
-}
-$('#imgInp').change(function() {
-  readURL(this);
-});
+// $('#blah').hide();
+// function readURL(input) {
+//   if (input.files && input.files[0]) {
+//     var reader = new FileReader();
+//     reader.onload = function(e) {
+//       $('#blah').show();
+//       $('#blah').attr('src', e.target.result);
+//     }
+//     reader.readAsDataURL(input.files[0])
+//   }
+// }
+// $('#imgInp').change(function() {
+//   readURL(this);
+// });
 </script>
 
 </div>

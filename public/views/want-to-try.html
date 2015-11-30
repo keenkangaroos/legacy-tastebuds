@@ -12,9 +12,29 @@ div.want-to-try-feed {
 
 </style>
 
-<div class="want-to-try-feed center-align">
+<div class="want-to-try-feed center-align" ng-controller="wantToTryController">
   <h1>Want to try</h1>
-  <div class="post">
+   <li style='list-style: none;' ng-repeat="post in wantToTryUser">
+    <h4>{{post.user.name}}</h4>
+      <p><b>Location:</b> {{ post.location }}<p>
+      <p>{{ post.comment }}</p>
+      <img src="{{post.image}}">
+
+<!--      <div class="buttons">
+      <div class="recc">
+        <div ng-if="post.eat" class="btn">
+          Eat!
+        </div>&nbsp;
+        <div ng-if="!post.eat" class="btn red">
+          Don't Eat!
+        </div>
+      </div>
+      <button ng-click="wantToTry(post)" class="btn waves-effect waves-light try" type="submit" name="action">I want to try &#9825;
+        <i class="material-icons right"></i>
+      </button>
+    </div> -->
+    </li>
+<!--   <div class="post">
     <h4>Kevin</h4>
     <img src="https://theverybesttop10.files.wordpress.com/2013/04/the-world_s-top-10-best-foods-inspired-by-hello-kitty-3.jpg"/>
 
@@ -31,4 +51,4 @@ div.want-to-try-feed {
       </button>
     </div>
   </div>
-</div>
+ --></div>

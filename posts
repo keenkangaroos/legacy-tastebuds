@@ -1,0 +1,27 @@
+insert into users(id, facebook_id, name, password, username) values(1, 1, 'Avi', '1234','avi123');
+insert into users(id, facebook_id, name, password, username) values(2, 2, 'David', '1234','david123');
+insert into posts(id, restaurant_id, user_id, comment) values(3,3,1, "boo");
+insert into posts(id, restaurant_id, user_id, comment) values(3,3,1, 'boo');
+insert into posts(id, restaurant_id, user_id, comment) values(4,4,1, 'boo');
+insert into posts(id, restaurant_id, user_id, comment, location, image) values(12, 67, 1,'hello', 'sm', 'image');
+SELECT image IN posts
+;
+SELECT * in posts;
+--help
+;
+select * posts
+;
+\d
+\h
+SELECT image from posts;
+select * from posts
+;
+delete * from posts;
+select * from posts
+;
+delete from posts;
+select * from posts;
+\d
+\d user
+\d users
+\s posts
