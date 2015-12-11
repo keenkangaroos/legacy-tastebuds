@@ -18,8 +18,8 @@ var User = require('../models/userModel');
 exports.createWantToTry = function(req, res) {
   var newWantToTry = req.body;
   WantToTry.forge({
-    username: WantToTry.user_id,
-    password: WantToTry.post_id
+    user_id: newWantToTry.user_id,
+    post_id: newWantToTry.post_id
   }).save()
     .then(function(postedModel) {
       res.status(200).json(postedModel);

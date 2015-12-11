@@ -1,3 +1,28 @@
+.profile-info{
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  float: left;
+}
+.profile-info img{
+  width: 120px;
+}
+.profile-info h4{
+  padding-top: 10px;
+}
+.profile-info .container{
+  margin-top: 40px;
+  margin-left: 8px;
+}
+.profile-info .container.two{
+  margin-top: 15px;
+}
+.post-form{
+  width: 300px;
+  float: left;
+  margin-left: 90px;
+}
 footer.footer-copyright {
   display: flex;
   min-height: 100vh;
@@ -36,6 +61,7 @@ textarea.input-field {
   margin-top: 8px;
 }
 
+<<<<<<< HEAD
 html {        
   background: #283048; /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #283048 , #859398); /* Chrome 10-25, Safari 5.1-6 */
@@ -54,3 +80,5 @@ a.btn {
 }
 
 
+=======
+>>>>>>> 11c1b588c3513b486b3712ad8f5c416a810c157c

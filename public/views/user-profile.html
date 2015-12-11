@@ -1,4 +1,5 @@
 <style>
+<<<<<<< HEAD
 button.btn {
   border-radius: 20px;
   margin: 5px;
@@ -14,44 +15,50 @@ div.card-panel {
 }
 
 
+=======
+  .user-post-container{
+    float:right;
+    margin-right: 200px;
+  }
+  .user-post-container img{
+    width: 500px;
+    height: 500px;
+    border-radius: 15px;
+  }
+  .user-post-container li{
+    list-style-type: none;
+  }
+>>>>>>> 11c1b588c3513b486b3712ad8f5c416a810c157c
 </style>
 <div ng-controller="profileController" class="container user-profile">
   <div class="row">
-    <div class="col s12 center-align"><h1>{{ username }}</h1></div>
+    <div class="col s12 center-align"></div>
   </div>
 
-  <div class="col s12 m8 offset-m2 l6 offset-l3 center-align">
-    <div class="card-panel grey lighten-5 z-depth-1">
-      <div class="row valign-wrapper">
-        <div class="col s2 offset-s3">
-          <img src="http://i.imgur.com/OFoPkjY.jpg" alt="user" class="circle responsive-img">
+    <div class="profile-info">
+       <h4><b>{{ userProfile.name }}</b></h4>
+       <img src="http://i.imgur.com/OFoPkjY.jpg" alt="user" class="circle responsive-img">
+
+        <div class="container col l6 s6 right-align">
+          <a ui-sref=".postList" class="btn waves-effect waves-light">
+          <i class="fa fa-th fa-4x">Following</i></a>
+        </div>
+        <div class="container col l6 s6 right-align two">
+          <a ui-sref=".postList" class="btn waves-effect waves-light">
+          <i class="fa fa-th fa-4x">Followers</i></a>
         </div>
 
-        <div class="col s7">
-          <big><b>Avi Samloff</b><br></big>
-          <span class="black-text">
-            I'm definitely a software engineer. #MakerSquare
-          </span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="divider"></div>
+    </div> <!--end of profile info class -->
     <br>
 
-    <!-- Use angular's (routeProvider); -->
-    <div class="row">
-      <div class="container col l6 s6 right-align">
-        <a ui-sref=".postList" class="btn waves-effect waves-light">
-          <i class="fa fa-th fa-4x">Posts</i></a>
-        </div>
-        <div class="container col l6 s6">
-          <a ui-sref=".eatList" class="btn waves-effect waves-light">
-            <i class="fa fa-cutlery fa-4x center-align">Eat me!</i></a>
 
-          </div>
-        </div>
+    <div class= "user-post-container">
+    <li ng-repeat="post in userPosts">
+      <p><b>Location</b> {{ post.location }}<p>
+      <p>{{ post.comment }}</p>
+      <img src="{{post.image}}">
+    </li>
 
+    </div>
 
-      </div>
+</div>

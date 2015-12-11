@@ -1,4 +1,14 @@
+<<<<<<< HEAD
 server/node_modules/
 server/package.json
 database/
 public/bower_components/
+=======
+### NPM ###
+npm-debug.log
+node_modules
+public/bower_components
+
+### database ###
+legacydatabase
+>>>>>>> 11c1b588c3513b486b3712ad8f5c416a810c157c
